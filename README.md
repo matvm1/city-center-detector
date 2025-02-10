@@ -1,8 +1,5 @@
 # Land Satellite Image Lookup
 
-## Demo
-[Youtube](https://youtu.be/EEfUkP8MxIY)
-
 ## Description
 This project enables analysts and researchers to view land satellite image captures in multiple visual wavelengths.
 The arrangement of different spectral bands allows them to view this image capture in the following representations:
@@ -41,7 +38,7 @@ Images can be seen in full-screen by clikcing on them in the gallery.
 This is a Flask web application that uses the [Google Geocoding API](https://github.com/googlemaps/google-maps-services-python) to fetch (lat, lon) coordinates for the location name/address entered by the user (app/services/geocoder.py).
 It then queries the Google Earth Engine API's LANDSAT/LC08/C02/T1_L2 image collection for the least cloudy satellite image capture of a region around the fetched coordinates (app/services/lastimg.py). The image capture is then ["visualized"](https://developers.google.com/earth-engine/apidocs/ee-image-visualize) by [Google Earth Engine](https://developers.google.com/earth-engine/guides/quickstart_python) into images colorized by the spectral band combinations requested. Visual enhancements are made to the images so that they are colored and brightened appropiately for users.
 Client-side cookies are used to pass the capture metadata and image URLs to /get_landsat_img should the user want to download them. Going back to thehome page clears these session variables.
-Several libraries are usedby this project. See requirements.txt.
+Several libraries are usedby this project. See [requirements.txt](requirements.txt).
 
 ## Installation
 
